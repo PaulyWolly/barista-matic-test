@@ -13,6 +13,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class MenuComponent implements OnInit {
   [x: string]: any;
+  postId: any;
   drinkName: any;
   drinks: DrinkInterface[] = [];
   inventoryItems: InventoryItemInterface[] = [];
