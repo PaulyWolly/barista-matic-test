@@ -1,0 +1,52 @@
+div.inventory-container {
+  display: flex;
+  justify-content: center;
+}
+
+.child-container {
+  align-self: center;
+}
+
+table {
+  border: 1px solid #808080;
+  width: 600px;
+  height: 300px;
+}
+
+.ref-title {
+  width: 15%
+}
+
+table thead .uc-title, .ingredient-title, .is-title, .ref-title {
+  background-color: rgb(88, 88, 88);
+  color: #c8c7c7;
+  font-weight:400 !important;
+}
+
+.float-right {
+  position: absolute;
+  right: 510px;
+  margin-top: -2px;
+}
+
+.float-right:hover {
+  cursor: pointer
+}
+
+.move-right-20 {
+  position: relative;
+  left: 25px;
+}
+
+th {
+  max-width: 100px;
+}
+
+td {
+  height: 20px;
+}
+
+span button.refill-btn.btn.btn-sm.btn-primary:hover {
+  cursor: pointer;
+  z-index: 2;
+}
