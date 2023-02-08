@@ -48,20 +48,20 @@ export class DrinkService {
   }
 
   getById(id: number) {
-    return this.http.get<InventoryItemInterface>(`http://localhost:8080/inventoryItems/${id}`);
+    return this.http.get<InventoryItemInterface>(`https://my-json-server.typicode.com/PaulyWolly/Barista-matic-main/inventoryItems/${id}`);
   }
 
   getUnitsOnHandCount (id: number) {
     // get id for inventoryItem
     // get count from UnitsOnHand
 
-    let idForItem = this.http.get<InventoryItemInterface>(`http://localhost:8080/inventoryItems/${id}`);
+    let idForItem = this.http.get<InventoryItemInterface>(`https://my-json-server.typicode.com/PaulyWolly/Barista-matic-main/inventoryItems/${id}`);
     console.log("itemReturned", idForItem)
   }
 
   getInventoryItemId (id: any) {
     console.log('id in view is: ' + id);
-    this.http.get<any>('http://localhost:8080/inventoryItems' + id)
+    this.http.get<any>('https://my-json-server.typicode.com/PaulyWolly/Barista-matic-main/inventoryItems' + id)
     .subscribe((res: any) => {
       this.list = res;
       console.log('data with respect to id is: ' + res);
@@ -69,16 +69,16 @@ export class DrinkService {
   }
 
   update(payload: InventoryItemInterface){
-    this.http.put(`http://localhost:8080/inventoryItems/${payload.id}`,payload);
+    this.http.put(`https://my-json-server.typicode.com/PaulyWolly/Barista-matic-main/inventoryItems/${payload.id}`,payload);
   }
 
   patch(payload: InventoryItemInterface){
-    this.http.patch(`http://localhost:8080/inventoryItems/${payload.id}`,payload);
+    this.http.patch(`https://my-json-server.typicode.com/PaulyWolly/Barista-matic-main/inventoryItems/${payload.id}`,payload);
   }
 
   editInventoryItems(id: number, body:InventoryItemInterface) {
     let itemToEdit = this.http
-      .put(`http://localhost:8080/inventoryItems/${id}`,
+      .put(`https://my-json-server.typicode.com/PaulyWolly/Barista-matic-main/inventoryItems/${id}`,
         JSON.stringify(body.unitsOnHand),
         this.httpOptions)
       .subscribe((res) => {
