@@ -43,7 +43,7 @@ export class DrinkService {
 
   getInventoryItems() {
     let RecipeItems = this.http
-    .get<InventoryItemInterface[]>('http://localhost:8080/inventoryItems')
+    .get<InventoryItemInterface[]>('https://my-json-server.typicode.com/PaulyWolly/Barista-matic-main/inventoryItems')
     return RecipeItems;
   }
 
